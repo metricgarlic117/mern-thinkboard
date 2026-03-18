@@ -52,7 +52,7 @@ Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`).
 ```bash
 # 1. Clone the repo
 git clone https://github.com/metricgarlic117/mern-thinkboard.git 
-cd thinkboard
+cd mern-thinkboard-main
 
 # 2. Install server & client dependencies
 cd server && npm install
