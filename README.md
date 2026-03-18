@@ -51,7 +51,7 @@ Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`).
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/<your-username>/thinkboard.git
+git clone https://github.com/metricgarlic117/mern-thinkboard.git 
 cd thinkboard
 
 # 2. Install server & client dependencies
