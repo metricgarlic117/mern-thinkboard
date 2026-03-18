@@ -8,7 +8,7 @@
 
 **🌍 Live Demo:** [https://mern-thinkboard-0l1o.onrender.com/](https://mern-thinkboard-0l1o.onrender.com/)
 
-> 🚧 A personal project built to practice the **MERN stack** — not production software.
+> A personal project built to practice the **MERN stack** — not production software.
 
 ---
 
