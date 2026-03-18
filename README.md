@@ -55,20 +55,23 @@ Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`).
 git clone https://github.com/metricgarlic117/mern-thinkboard.git
 cd mern-thinkboard-main
 
-# 2. Install dependencies for both server and client
-cd server && npm install
-cd ../client && npm install
+# 2. Install all dependencies & build the client (run from root)
+npm run build
 ```
 
 Create a `server/.env` file (see [Environment Variables](#-environment-variables) below), then:
 
 ```bash
-# Start the backend (http://localhost:5001)
-cd server && npm run dev
-
-# Start the frontend (http://localhost:5173)
-cd client && npm run dev
+# Start the server (http://localhost:5001)
+npm start
 ```
+
+> For development with hot-reload, run the server and client separately:
+>
+> ```bash
+> cd server && npm run dev   # backend on http://localhost:5001
+> cd client && npm run dev   # frontend on http://localhost:5173
+> ```
 
 ---
 
