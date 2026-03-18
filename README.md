@@ -6,6 +6,8 @@
 ![Express](https://img.shields.io/badge/Express-5-000000?style=flat-square&logo=express&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
+**🌍 Live Demo:** [https://mern-thinkboard-0l1o.onrender.com/](https://mern-thinkboard-0l1o.onrender.com/)
+
 > 🚧 A personal project built to practice the **MERN stack** — not production software.
 
 ---
