@@ -12,15 +12,15 @@
 
 ## 📖 About
 
-ThinkBoard is a simple note-taking app I built to reinforce core MERN concepts: RESTful API design, React state management, client-side routing, and database modelling with Mongoose. The main technical highlight is the **Upstash Redis rate limiter** applied globally across all API routes — with a graceful in-app UI response when the limit is hit, rather than an uncaught crash.
+ThinkBoard is a simple note-taking app built to reinforce core MERN concepts: RESTful API design, React state management, client-side routing, and database modelling with Mongoose. The main technical highlight is the **Upstash Redis rate limiter** applied globally across all API routes — with a graceful in-app UI response when the limit is hit, rather than an uncaught crash or blank page.
 
 ---
 
 ## ✨ Key Highlights
 
-### 🔒 Rate Limiting (Upstash Redis)
+### 🔒 Rate Limiting — Upstash Redis
 
-Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`). When the limit is exceeded, the API returns `429 Too Many Requests`. The frontend detects this status code and swaps the page content for a user-friendly `RateLimitedUI` component — no crashes, no blank pages.
+Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`). When the limit is exceeded, the API returns `429 Too Many Requests`. The frontend detects this status code and replaces the page content with a user-friendly `RateLimitedUI` component — no crashes, no blank pages, no silent failures.
 
 ### 🧩 Libraries & Plugins
 
@@ -36,14 +36,15 @@ Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`).
 | Backend | `@upstash/ratelimit` | Redis-backed rate limiting |
 | Backend | `dotenv` | Environment variable management |
 | Backend | `cors` | Cross-origin request handling |
+| Backend | `nodemon` | Auto-restart during development |
 
 ---
 
 ## 🛠️ Prerequisites
 
-- Node.js `>= 18`
-- A [MongoDB Atlas](https://www.mongodb.com/atlas) cluster (free tier)
-- An [Upstash Redis](https://upstash.com/) database (free tier)
+- [Node.js](https://nodejs.org/) `>= 18`
+- A [MongoDB Atlas](https://www.mongodb.com/atlas) cluster *(free tier works)*
+- An [Upstash Redis](https://upstash.com/) database *(free tier works)*
 
 ---
 
@@ -51,21 +52,21 @@ Every request passes through a Redis-backed rate limiter (`@upstash/ratelimit`).
 
 ```bash
 # 1. Clone the repo
-git clone https://github.com/metricgarlic117/mern-thinkboard.git 
+git clone https://github.com/metricgarlic117/mern-thinkboard.git
 cd mern-thinkboard-main
 
-# 2. Install server & client dependencies
+# 2. Install dependencies for both server and client
 cd server && npm install
 cd ../client && npm install
 ```
 
-Create `server/.env` (see below), then:
+Create a `server/.env` file (see [Environment Variables](#-environment-variables) below), then:
 
 ```bash
-# Run the backend (port 5001)
+# Start the backend (http://localhost:5001)
 cd server && npm run dev
 
-# Run the frontend (port 5173)
+# Start the frontend (http://localhost:5173)
 cd client && npm run dev
 ```
 
@@ -73,13 +74,13 @@ cd client && npm run dev
 
 ## 🔐 Environment Variables
 
-Create a `server/.env` file with these keys — **never commit this file**:
+Create `server/.env` with the following keys — **never commit this file**:
 
 | Variable | Description |
 |----------|-------------|
 | `MONGO_URI` | MongoDB Atlas connection string |
-| `PORT` | Server port (default `5001`) |
-| `UPSTASH_REDIS_REST_URL` | Upstash Redis REST endpoint |
+| `PORT` | Server port (default: `5001`) |
+| `UPSTASH_REDIS_REST_URL` | Upstash Redis REST endpoint URL |
 | `UPSTASH_REDIS_REST_TOKEN` | Upstash Redis auth token |
 
 ---
@@ -90,4 +91,4 @@ MIT — free to use and learn from.
 
 ---
 
-> _Built as a learning exercise. Feedback welcome!_
+> *Built as a learning exercise. Feedback welcome!*
