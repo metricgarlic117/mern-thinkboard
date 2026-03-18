@@ -1,0 +1,22 @@
+{
+  "name": "product_catalog",
+  "version": "1.0.0",
+  "description": "![Node.js](https://img.shields.io/badge/Node.js-%3E%3D18-339933?style=flat-square&logo=node.js&logoColor=white) ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black) ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-47A248?style=flat-square&logo=mongodb&logoColor=white) ![Express](https://img.shields.io/badge/Express-5-000000?style=flat-square&logo=express&logoColor=white) ![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix server && npm install --prefix client && npm run build --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metricgarlic117/mern-thinkboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/metricgarlic117/mern-thinkboard/issues"
+  },
+  "homepage": "https://github.com/metricgarlic117/mern-thinkboard#readme"
+}
