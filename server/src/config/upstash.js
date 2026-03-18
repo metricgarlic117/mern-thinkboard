@@ -1,0 +1,21 @@
+import { Ratelimit } from "@upstash/ratelimit";
+import { Redis } from "@upstash/redis";
+import dotenv from "dotenv";
+
+dotenv.config();
+
+// create a ratelimiter that allows 10 request per 20 seconds
+const ratelimit = new Ratelimit({
+  redis: Redis.fromEnv(),
+  limiter: Ratelimit.slidingWindow(5, "10 s"),
+  analytics: true,
+});
+
+// const identifier = "api"; // or use userID, IP, etc.
+// const { success } = await ratelimit.limit(identifier);
+
+// if (!success) {
+//   return "Unable to process at this time";
+// }
+
+export default ratelimit;
